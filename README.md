@@ -1,4 +1,4 @@
-# ESTIMATIVA EVAPOTRANSPIRACAO TCC
+# ESTIMATIVA EVAPOTRANSPIRAÇÃO TCC
 
 ![texto](https://img.shields.io/static/v1?label=linguagem&message=Python&color=green&style=flat-square "linguagem")
 ![texto](https://img.shields.io/static/v1?label=ambiente&message=Python&color=orange&style=flat-square "ambiente")
@@ -47,11 +47,11 @@ conda env create -n nome_qualquer -f env.yaml #ainda não implementado
 
 ## :arrow_forward: Execução
 
-:fast_forward: Este trabalho de pesquisa foi executado 100% através do google colab, porém, nada impede de os scripts serem rodados localmente desde que tenha-se os dados disponíveis para acesso. Seguem os links dos notebooks com códigos executados.   
-:fast_forward: []().  
-:fast_forward: []().  
-:fast_forward: []().  
-:fast_forward: []().  
+:fast_forward: Este trabalho de pesquisa foi executado 100% através do google colab, porém, nada impede de os scripts serem rodados localmente desde que tenha-se os dados disponíveis para acesso e análise. Seguem os links dos notebooks com códigos executados.   
+  
+:fast_forward: [Tratamento de variáveis e estimativa de evapotranspiração do CAM3](https://colab.research.google.com/drive/1BERQkL3sLNHpyoL_Yy-RZX5_PRxCtkjB?usp=sharing).  
+:fast_forward: [Tratamento de variáveis e estimativa de evapotranspiração ERA5](https://colab.research.google.com/drive/1omqHkYAqNb0Kr-RBi8xStjG7is8tFPJ9?usp=sharing).  
+:fast_forward: [Análise e tratamento de resultados](https://colab.research.google.com/drive/1yoSGNqF3VuYB_KiajLH5llHCrwtE7Qd5?usp=sharing).  
 
 
 ## :construction: Desenvolvimento
@@ -60,9 +60,19 @@ conda env create -n nome_qualquer -f env.yaml #ainda não implementado
 
 ## :rotating_light: Como rodar
 
-Em construção ...:
+Prepara os dados necessários para a estimativa e chame-os no módulo de cálculo:
 ```bash
-...
+from src import calcula_evapotranspiracao
+
+evp = calcula_evapotranspiracao.main(valor_temperatura,
+                                     valor_umidade_relativa, 
+                                     valor_pressao,
+                                     valor_vento,
+                                     valor_radiacao,
+                                     Rho=1000,              # opcional
+                                     G=0,                   # opcional
+                                     print_saidas=False)
+
 ```  
 
 ## :green_apple: I/O
