@@ -42,7 +42,7 @@ git clone https://github.com/Ramonmurilo/ESTIMATIVA_EVAPOTRANSPIRACAO_TCC.git
 cd ESTIMATIVA_EVAPOTRANSPIRACAO_TCC
 
 # 3. Reproduza o ambiente 
-conda env create -n nome_qualquer -f env.yaml #ainda não implementado
+conda env create -n nome_qualquer -f env.yaml
 ```
 
 ## :arrow_forward: Execução
